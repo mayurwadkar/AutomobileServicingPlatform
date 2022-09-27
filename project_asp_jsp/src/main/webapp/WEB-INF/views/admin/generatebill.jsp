@@ -87,8 +87,8 @@ h1 {
 						<div class="col-md-12">
 							<div class="row">
 								<div class="col-md-4">
-									<!-- <img class="img" alt="Invoce Template"
-										src="http://pngimg.com/uploads/shopping_cart/shopping_cart_PNG59.png" />--> 
+									 <img class="img" alt="Invoce Template" style="width:170px; height:180px "
+										src="https://www.clipartmax.com/png/middle/129-1292860_car-auto-mechanic-female-illustration-mechanic-clipart-png.png" />
 								</div>
 								<div class="col-md-8 text-right">
 									<h4 style="color: #F81D2D;">
