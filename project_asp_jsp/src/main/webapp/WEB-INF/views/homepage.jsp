@@ -18,9 +18,12 @@
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css">
 <style type="text/css">
-body {
-	background-color: #f0f2f5;
-	font-family: "Nunito Sans";
+body, html {
+	background-image:
+		url("https://img.freepik.com/free-vector/motorcycle-repair-maintenance-service_1150-43150.jpg?w=996&t=st=1664291491~exp=1664292091~hmac=2c4636a03c87f8b7f9416e02b78b37df63e8fcafc94794a98a18e6b49ca49807");
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
 }
 
 .login-form {
@@ -99,13 +102,14 @@ a:hover {
 		<div class="row align-items-center justify-content-center vh-100">
 			<div class="col-md-7">
 				<!-- <img src="G:/Images/m2m.jpeg" class="w-50"> -->
-				<h1 class="text-primary"
-					style="font: bolder; font-size: 1.5cm; font-family:">
+				<h1
+					style="color: white; text-shadow: 5px 5px 5px black; font: bolder; font-size: 1.5cm; font-family:">
 					<b>&nbsp;&nbsp;M2M Servicing Center</b>
 				</h1>
-				<h3>M2M helps you to serve you and your vehicles.</h3>
+				<h3 style="color: white; text-shadow: 5px 5px 5px black;">M2M
+					helps you to serve you and your vehicles.</h3>
 			</div>
-			<div class="col-md-5">
+			<div class="col-md-5" style="box-shadow: 5px 5px 5px black">
 				<h5 style="color: green; font: italic;">${ncmsg}</h5>
 				<h5 style="color: red; font: italic;">${msg}</h5>
 				<form class="login-form" action="${url1}" method="post">
@@ -119,18 +123,19 @@ a:hover {
 
 					</div>
 					<div class="form-group form-check">
-						<input type="checkbox" class="form-check-input" id="exampleCheck1" onclick="myFunction()">
-						<label class="form-check-label" for="exampleCheck1" >Show
-						Password</label>
+						<input type="checkbox" class="form-check-input" id="exampleCheck1"
+							onclick="myFunction()"> <label class="form-check-label"
+							for="exampleCheck1">Show Password</label>
 					</div>
-					
+
 					<button type="submit" class="btn btn-custom btn-lg btn-block mt-3">Login</button>
 
 
 					<div class="text-center pt-3 pb-3">
 						<a href="${url2}" class="">Forgotten password?</a>
 						<hr>
-						<a class="btn btn-success btn-lg mt-3" href="${url3}">New Customer Registration</a>
+						<a class="btn btn-success btn-lg mt-3" href="${url3}">New
+							Customer Registration</a>
 					</div>
 				</form>
 				<p class="pt-3 text-center">

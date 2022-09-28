@@ -29,6 +29,24 @@ header {
 	text-align: center;
 	color: white;
 }
+
+body,html{
+  background-image      : url("https://img.freepik.com/free-vector/motorcycle-repair-maintenance-service_1150-43150.jpg?w=996&t=st=1664291491~exp=1664292091~hmac=2c4636a03c87f8b7f9416e02b78b37df63e8fcafc94794a98a18e6b49ca49807");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  
+}
+
+.card{
+   rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+   
+    box-shadow:  15px 15px 15px black;
+    
+    border-radius: 20px;
+}
 </style>
 </head>
 
@@ -46,7 +64,7 @@ header {
 
 		</nav>
 	</header>
-	<div class="jumbotron" style="height: 699px">
+	<div >
 
 		<h4 style="color: green;">${requestScope.msg}</h4>
 		<h4 style="color: green;">${requestScope.apmsg}</h4>
@@ -63,10 +81,10 @@ header {
 		<fieldset class="p-2">
 			<legend>
 				<label class="display-4"> <b> <small
-						style="color: #4C0033"> Customer Home Page </small>
+						style="color:white; text-shadow:5px 5px 5px black;  font: bolder;"> Customer Home Page </small>
 				</b>
 				</label>
-				<h3>Hello ${user_details.firstName},</h3>
+				<h3 style="color:white; text-shadow:5px 5px 5px black;  font: bolder;">Hello ${user_details.firstName},</h3>
 				<div class="row m-5">
 					<div class="col ">
 						<div class="card" style="width: 18rem;">

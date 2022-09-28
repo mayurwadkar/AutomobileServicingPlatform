@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -30,6 +31,24 @@ header {
 	text-align: center;
 	color: white;
 }
+.card{
+   rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+   
+    box-shadow:  15px 15px 15px black;
+    
+    border-radius: 20px;
+}
+
+body,html{
+  background-image      : url("https://img.freepik.com/free-vector/motorcycle-repair-maintenance-service_1150-43150.jpg?w=996&t=st=1664291491~exp=1664292091~hmac=2c4636a03c87f8b7f9416e02b78b37df63e8fcafc94794a98a18e6b49ca49807");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+
 </style>
 <body>
 
@@ -46,7 +65,8 @@ header {
 
 		</nav>
 	</header>
-	<div class="jumbotron" style="height: 699px">
+	<div class="col-sm-6 offset-sm-3 mt-5" >
+	  <div class="card mt-5" style="background-color:#E9F7EF;">
 
 		<spring:url var="url1" value="/mechanic/profile"></spring:url>
 
@@ -61,7 +81,7 @@ header {
 				<h3>Hello ${mechanic_details.firstName},</h3>
 				<div class="row ">
 					<div class="col ">
-						<div class="card" style="width: 18rem;">
+						<div class="card" style="width: 18rem;  " >
 							<div class="card-body">
 								<h5 class="card-title">View Appointments</h5>
 
@@ -88,6 +108,7 @@ header {
 
 			</legend>
 		</fieldset>
+		</div>
 	</div>
 	<div>
 		<footer class='footer'>
