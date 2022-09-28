@@ -71,6 +71,7 @@ header {
 				<th>Status</th>
 				<th>Completed Date</th>
 				<th>Completed Time</th>
+				<th>Bill</th>
 			</tr>
 			<c:forEach var="a" items="${requestScope.appointment_details}">
 				<tr>

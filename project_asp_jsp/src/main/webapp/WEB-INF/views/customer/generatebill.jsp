@@ -70,7 +70,7 @@ h1 {
     </header>
 	<div class="jumbotron">
 		
-		<spring:url var="url1" value="/admin/viewcompletedappointments"></spring:url>
+		<spring:url var="url1" value="/customer/appointments"></spring:url>
 		<h4>
 			<a href="${url1}" class="btn btn-outline-info">Back</a>
 		</h4>
