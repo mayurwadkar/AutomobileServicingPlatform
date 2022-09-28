@@ -9,8 +9,8 @@
 <title>Insert title here</title>
 <link rel="stylesheet"
 	href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
-	
-	<style type="text/css">
+
+<style type="text/css">
 header {
 	background-color: #282c34;
 	min-height: 10vh;
@@ -32,11 +32,11 @@ header {
 	color: white;
 }
 </style>
-	
-	
+
+
 </head>
 <body>
- <spring:url var="url6" value="/user/logout"></spring:url>
+	<spring:url var="url6" value="/user/logout"></spring:url>
 	<header>
 		<nav class="navbar navbar-dark bg-dark">
 			<a href="http://localhost:8080/asp_jsp/customer/home"
@@ -51,16 +51,15 @@ header {
 	</header>
 
 	<div class="jumbotron" style="height: 699px">
-		
+
 		<spring:url var="url1" value="/customer/appointments"></spring:url>
 
 		<h4>
-			<a href="${url1}" class="btn btn-outline-info"
-					role="button">Back</a>
+			<a href="${url1}" class="btn btn-outline-info" role="button">Back</a>
 		</h4>
 		<h4 style="color: red;">${amsg}</h4>
 		<table class="table table-striped">
-			<caption>${status} APPOINTMENTS</caption>
+			<caption>${status}APPOINTMENTS</caption>
 
 			<tr>
 				<th>Id</th>
@@ -84,6 +83,8 @@ header {
 					<td align="left">&nbsp;&nbsp;${a.status}</td>
 					<td align="left">&nbsp;&nbsp;${a.completedDate}</td>
 					<td align="left">&nbsp;&nbsp;${a.completedTime}</td>
+					<td align="left">&nbsp;&nbsp;<a href="generatebill?id=${a.id}">View Bill</a></td>
+
 				</tr>
 			</c:forEach>
 		</table>

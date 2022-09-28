@@ -3,6 +3,7 @@ package com.app.controller;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 import javax.servlet.http.HttpSession;
 
@@ -217,6 +218,33 @@ public class CustomerController {
 			}
 		}
 		return "/customer/viewappointments";
+	}
+	
+	@GetMapping("/generatebill")
+	public String showGenerateBillForm(@RequestParam int id, Model map, HttpSession session) {
+		Appointment appointment = userService.getAppoinmentDetails(id);
+		Set<Service> services = userService.getServicesByAppointment(id);
+		map.addAttribute("appointment_details", appointment);
+		map.addAttribute("services", services);
+		double total = 0, discount = 0, payalableAmount = 0;
+		for (Service s : services) {
+			total += s.getAmount();
+		}
+		if (total > 10000) {
+			discount = total * 0.2;
+		} else if (total > 5000) {
+			discount = total * 0.1;
+		} else if (total > 1000) {
+			discount = total * 0.05;
+		}
+		payalableAmount = total - discount;
+		map.addAttribute("total_amount", total);
+		map.addAttribute("discount_amount", discount);
+		session.setAttribute("payable_amount", payalableAmount);
+
+		LocalDate date = LocalDate.now();
+		map.addAttribute("date", date);
+		return "/customer/generatebill";
 	}
 
 }
